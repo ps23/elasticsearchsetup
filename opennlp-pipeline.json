@@ -1,0 +1,10 @@
+{
+  "description": "A pipeline to do named entity extraction",
+  "processors": [
+    {
+      "opennlp" : {
+        "field" : "mo_notes"
+      }
+    }
+  ]
+}
