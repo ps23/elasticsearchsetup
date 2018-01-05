@@ -1,6 +1,6 @@
 BINARY = elasticsearchsetup
 VET_REPORT = vet.report
-TEST_REPORT = tests.xml
+TEST_REPORT = result.test
 GOARCH = amd64
 
 VERSION?=?
