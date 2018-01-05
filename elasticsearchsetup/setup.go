@@ -39,6 +39,8 @@ func SetupOpenNlpPipeline(client *elastic.Client, id string, field string) {
 }
 
 func SetupTestClient(url string, sniff bool) *elastic.Client {
+  if( ! recipes.CheckStatus(url, 10) ) { log.Fatal("Could not find any elastic instance on this url") }
+
   var err error
 
   client, err := elastic.NewClient(elastic.SetURL(url), elastic.SetSniff(sniff))
